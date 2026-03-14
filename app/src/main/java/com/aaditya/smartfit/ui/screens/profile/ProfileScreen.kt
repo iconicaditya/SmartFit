@@ -10,10 +10,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.aaditya.smartfit.ui.components.AnimatedButton
 
 @Composable
-fun ProfileScreen(onBack: () -> Unit) {
+fun ProfileScreen() {
     val viewModel = remember { ProfileViewModel() }
 
     Column(
@@ -26,7 +25,6 @@ fun ProfileScreen(onBack: () -> Unit) {
         Text(text = "Name: ${viewModel.name}")
         Text(text = "Age: ${viewModel.age}")
         Text(text = "Weekly activity goal: ${viewModel.weeklyGoal} sessions")
-        AnimatedButton(text = "Back to Home", onClick = onBack)
     }
 }
 

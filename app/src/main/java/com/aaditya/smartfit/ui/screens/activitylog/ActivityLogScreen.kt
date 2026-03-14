@@ -11,10 +11,9 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.aaditya.smartfit.ui.components.ActivityCard
-import com.aaditya.smartfit.ui.components.AnimatedButton
 
 @Composable
-fun ActivityLogScreen(onBack: () -> Unit) {
+fun ActivityLogScreen() {
     val viewModel = remember { ActivityLogViewModel() }
 
     Column(
@@ -31,7 +30,6 @@ fun ActivityLogScreen(onBack: () -> Unit) {
                 value = "Done"
             )
         }
-        AnimatedButton(text = "Back to Home", onClick = onBack)
     }
 }
 
